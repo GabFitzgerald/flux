@@ -23,7 +23,7 @@ module Flux::QueryResult
     tables = [] of Table(T)
 
     AnnotatedCSV.new(string_or_io, headers: true).each do |csv|
-      idx = csv["table"].to_i
+      idx = csv["table"].to_i64
       table = tables[idx]?
 
       unless table
