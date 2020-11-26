@@ -5,7 +5,7 @@ struct Flux::QueryResult::Table(T)
 
   getter columns : Array(Column)
 
-  getter records : Array of T
+  getter records : Array(T)
 
   def initialize(@columns)
   end
