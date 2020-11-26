@@ -7,7 +7,7 @@ struct Flux::QueryResult::Table(T)
 
   getter records : Array(T)
 
-  def initialize(@columns, @records)
+  def initialize(@columns, @records = [] of T)
   end
 
   delegate each, :<<, unsafe_fetch, to: records
